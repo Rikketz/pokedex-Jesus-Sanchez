@@ -1,0 +1,385 @@
+@font-face {
+    font-family: 'PokeFuente';
+    src: url(./assets/fonts/PokemonGb-RAeo.ttf);
+}
+
+@keyframes moverImagen{
+    0% {
+        transform: translateY(0); /* La posición inicial de la imagen */
+    }
+    50% {
+        transform: translateY(-4px); /* Mover la imagen 2 píxeles hacia arriba */
+    }
+    100% {
+        transform: translateY(0); /* Volver a la posición inicial */
+    }
+
+}
+.elementos{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    gap: 5px;
+}
+.imagenElemento{
+    height: 30px;
+}
+
+header{
+    background-color: brown;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./assets/bgCaja1.png);
+    background-size: cover;
+}
+
+.footer{
+    background-color: brown;
+    height: 10%;
+    width: 100%;
+}
+.contenedorLogo{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    height: 20%;
+}
+
+.logoPokemon{
+    width: 50%;
+}
+
+.filtradorPorTipos{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.buscaNombre{
+    background-color: white;
+    font-family: 'PokeFuente';
+    font-size: 15px;
+    height: 15px;
+    color: blue;
+}
+
+.separaDorTrainerListaPokemon{
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    border: 20px solid black;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.trainerInfo{
+    background-image: url(./assets/trainerCard.png);
+    background-size: cover;
+    width: 40%;
+    border-right: 20px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.infoTrainer{
+    font-family: 'PokeFuente';
+    display: flex;
+    flex-direction: column;
+    padding-left: 75px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.fotoTrainer{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.imagenEntrenador{
+    height: 75%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 50%;
+    justify-content: flex-start;
+    overflow: auto;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.cajaInfoPokemon{
+    width: 51.5%;
+    height: 100%;
+    background-image: url(./assets/3861.png);
+    position: absolute;
+    z-index: 50;
+    height: 600px;
+
+}
+
+.pokeSprite{
+    /* animation: moverImagen 0.5s infinite; */
+    padding-top: 80px;
+    width: 50%;
+    height: 30%;
+    padding-left: 40px;
+
+
+}
+
+.numeroIdCartitas{
+    font-family: 'PokeFuente';
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10px;
+    padding-left: 5px;
+}
+.nombrePokeCartitas{
+    font-family: 'PokeFuente';
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    padding-left: 5px;
+    color: white;
+    outline-color: black;
+    -webkit-text-stroke: 0.1px black;
+}
+
+
+.cajaCadaPokemon{
+    display: flex;
+    flex-direction: column;
+    background-image: url(./assets/cajitaPkmn.png);
+    background-size: cover;
+    height: 240px;
+    width: 160px;
+    position: relative;
+    border-radius: 5px;
+    justify-content: space-between
+}
+
+.internoFotosTextos{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.internoTexto{
+    display: flex;
+    flex-direction: column;
+    font-family: 'PokeFuente';
+    padding-top: 3%;
+    padding-left: 20px;
+}
+
+.internoSoloFoto{
+    height: 60%;
+    width: 60%;
+}
+
+.pokeFotoGrande{
+    height: 60%;
+}
+
+.grass{
+    content: "";
+    background-image: url(./assets/bgGrass.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.fire{
+    content: "";
+    background-image: url(./assets/bgFire.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.water{
+    content: "";
+    background-image: url(./assets/bgWater.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.bug{
+    content: "";
+    background-image: url(./assets/bgBug.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.normal{
+    content: "";
+    background-image: url(./assets/bgNormal.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.poison{
+    content: "";
+    background-image: url(./assets/bgPoison.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.electric{
+    content: "";
+    background-image: url(./assets/bgElectric.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.ground{
+    content: "";
+    background-image: url(./assets/bgEarth.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.fairy{
+    content: "";
+    background-image: url(./assets/bgFairy.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.fighting{
+    content: "";
+    background-image: url(./assets/bgFighting.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+.psychic{
+    content: "";
+    background-image: url(./assets/bgPsi.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.rock{
+    content: "";
+    background-image: url(./assets/bgRock.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.ghost{
+    content: "";
+    background-image: url(./assets/bgCementiry.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.ice{
+    content: "";
+    background-image: url(./assets/bgIce.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.dragon{
+    content: "";
+    background-image: url(./assets/bgDragon.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+}
