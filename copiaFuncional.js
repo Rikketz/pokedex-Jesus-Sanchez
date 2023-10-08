@@ -271,80 +271,80 @@ const init = async function(){
     const mappedPokemons = mapPokemons(pokemons);
 
     let btnAgua = document.querySelector('.tipoAgua');
-btnAgua.addEventListener('click', function(){
+    btnAgua.addEventListener('click', function(){
     let pokemonAgua = mappedPokemons.filter(pokemon => pokemon.tipo == 'water');
     drawPokemons(pokemonAgua);
-})
-let btnDragon = document.querySelector('.tipoDragon');
-btnDragon.addEventListener('click', function(){
-    let pokemonVeneno = mappedPokemons.filter(pokemon => pokemon.tipo === 'dragon');
-    drawPokemons(pokemonVeneno)
-})
-let btnFairy = document.querySelector('.tipoHada');
-btnFairy.addEventListener('click', function(){
-    let pokemonVeneno = mappedPokemons.filter(pokemon => pokemon.tipo === 'fairy');
-    drawPokemons(pokemonVeneno)
-})
-let btnGhost = document.querySelector('.tipoFantasma');
-btnGhost.addEventListener('click', function(){
-    let pokemonGhost = mappedPokemons.filter(pokemon => pokemon.tipo === 'ghost');
-    drawPokemons(pokemonGhost)
-})
-let btnFight = document.querySelector('.tipoLucha');
-btnFight.addEventListener('click', function(){
-    let pokemonLucha = mappedPokemons.filter(pokemon => pokemon.tipo === 'fighting');
-    drawPokemons(pokemonLucha)
-})
-let btnVeneno = document.querySelector('.tipoVeneno');
-btnVeneno.addEventListener('click', function(){
-    let pokemonVeneno = mappedPokemons.filter(pokemon => pokemon.tipo === 'poison');
-    drawPokemons(pokemonVeneno)
-})
-let btnFire = document.querySelector('.tipoFuego');
-btnFire.addEventListener('click', function(){
-    let pokemonFuego = mappedPokemons.filter(pokemon => pokemon.tipo === 'fire');
-    drawPokemons(pokemonFuego)
-})
-let btnIce = document.querySelector('.tipoHielo');
-btnIce.addEventListener('click', function(){
-    let pokemonHielo = mappedPokemons.filter(pokemon => pokemon.tipo === 'ice');
-    drawPokemons(pokemonHielo)
-})
-let btnGrass = document.querySelector('.tipoPlanta');
-btnGrass.addEventListener('click', function(){
-    let pokemonPlanta = mappedPokemons.filter(pokemon => pokemon.tipo === 'grass');
-    drawPokemons(pokemonPlanta)
-})
-let btnBug = document.querySelector('.tipoBicho');
-btnBug.addEventListener('click', function(){
-    let pokemonBicho = mappedPokemons.filter(pokemon => pokemon.tipo === 'bug');
-    drawPokemons(pokemonBicho)
-})
-let btnNormal = document.querySelector('.tipoNormal');
-btnNormal.addEventListener('click', function(){
-    let pokemonNormal = mappedPokemons.filter(pokemon => pokemon.tipo === 'normal');
-    drawPokemons(pokemonNormal)
-})
-let btnElectrico = document.querySelector('.tipoElectrico');
-btnElectrico.addEventListener('click', function(){
-    let pokemonElectrico = mappedPokemons.filter(pokemon => pokemon.tipo === 'electric');
-    drawPokemons(pokemonElectrico)
-})
-let btnTierra = document.querySelector('.tipoTierra');
-btnTierra.addEventListener('click', function(){
-    let pokemonTierra = mappedPokemons.filter(pokemon => pokemon.tipo === 'ground');
-    drawPokemons(pokemonTierra)
-})
-let btnRock = document.querySelector('.tipoRoca');
-btnRock.addEventListener('click', function(){
-    let pokemonRoca = mappedPokemons.filter(pokemon => pokemon.tipo === 'rock');
-    drawPokemons(pokemonRoca)
-})
-let btnAll = document.querySelector('.tipoTodos');
-btnAll.addEventListener('click', function(){
-    let pokemonTodos = mappedPokemons
-    drawPokemons(pokemonTodos)
-});
+    })
+    let btnDragon = document.querySelector('.tipoDragon');
+    btnDragon.addEventListener('click', function(){
+        let pokemonVeneno = mappedPokemons.filter(pokemon => pokemon.tipo === 'dragon');
+        drawPokemons(pokemonVeneno)
+    })
+    let btnFairy = document.querySelector('.tipoHada');
+    btnFairy.addEventListener('click', function(){
+        let pokemonVeneno = mappedPokemons.filter(pokemon => pokemon.tipo === 'fairy');
+        drawPokemons(pokemonVeneno)
+    })
+    let btnGhost = document.querySelector('.tipoFantasma');
+    btnGhost.addEventListener('click', function(){
+        let pokemonGhost = mappedPokemons.filter(pokemon => pokemon.tipo === 'ghost');
+        drawPokemons(pokemonGhost)
+    })
+    let btnFight = document.querySelector('.tipoLucha');
+    btnFight.addEventListener('click', function(){
+        let pokemonLucha = mappedPokemons.filter(pokemon => pokemon.tipo === 'fighting');
+        drawPokemons(pokemonLucha)
+    })
+    let btnVeneno = document.querySelector('.tipoVeneno');
+    btnVeneno.addEventListener('click', function(){
+        let pokemonVeneno = mappedPokemons.filter(pokemon => pokemon.tipo === 'poison');
+        drawPokemons(pokemonVeneno)
+    })
+    let btnFire = document.querySelector('.tipoFuego');
+    btnFire.addEventListener('click', function(){
+        let pokemonFuego = mappedPokemons.filter(pokemon => pokemon.tipo === 'fire');
+        drawPokemons(pokemonFuego)
+    })
+    let btnIce = document.querySelector('.tipoHielo');
+    btnIce.addEventListener('click', function(){
+        let pokemonHielo = mappedPokemons.filter(pokemon => pokemon.tipo === 'ice');
+        drawPokemons(pokemonHielo)
+    })
+    let btnGrass = document.querySelector('.tipoPlanta');
+    btnGrass.addEventListener('click', function(){
+        let pokemonPlanta = mappedPokemons.filter(pokemon => pokemon.tipo === 'grass');
+        drawPokemons(pokemonPlanta)
+    })
+    let btnBug = document.querySelector('.tipoBicho');
+    btnBug.addEventListener('click', function(){
+        let pokemonBicho = mappedPokemons.filter(pokemon => pokemon.tipo === 'bug');
+        drawPokemons(pokemonBicho)
+    })
+    let btnNormal = document.querySelector('.tipoNormal');
+    btnNormal.addEventListener('click', function(){
+        let pokemonNormal = mappedPokemons.filter(pokemon => pokemon.tipo === 'normal');
+        drawPokemons(pokemonNormal)
+    })
+    let btnElectrico = document.querySelector('.tipoElectrico');
+    btnElectrico.addEventListener('click', function(){
+        let pokemonElectrico = mappedPokemons.filter(pokemon => pokemon.tipo === 'electric');
+        drawPokemons(pokemonElectrico)
+    })
+    let btnTierra = document.querySelector('.tipoTierra');
+    btnTierra.addEventListener('click', function(){
+        let pokemonTierra = mappedPokemons.filter(pokemon => pokemon.tipo === 'ground');
+        drawPokemons(pokemonTierra)
+    })
+    let btnRock = document.querySelector('.tipoRoca');
+    btnRock.addEventListener('click', function(){
+        let pokemonRoca = mappedPokemons.filter(pokemon => pokemon.tipo === 'rock');
+        drawPokemons(pokemonRoca)
+    })
+    let btnAll = document.querySelector('.tipoTodos');
+    btnAll.addEventListener('click', function(){
+        let pokemonTodos = mappedPokemons
+        drawPokemons(pokemonTodos)
+    });
 
 
 
