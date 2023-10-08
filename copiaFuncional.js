@@ -1,5 +1,7 @@
-
-
+let userName = "";
+let siUserM = './assets/hero.png'
+let siUserF = './assets/heroine.png'
+let genderUser = "";
 
 // FUNCIONA, NO TOCAR
 // AQUI ESTOY RECOGIENDO TODOS LOS DATOS DE LOS 150 POKEMONS
@@ -134,6 +136,11 @@ let divInicial$$ = document.querySelector('.dialogueBoxStart');
 let divInnerInicial$$ = document.createElement('div');
 divInnerInicial$$.className = "inicioDuro";
 let cuadritoMensajeInicial = document.createElement('div');
+cuadritoMensajeInicial.className = "fotosGender";
+let fotochica = document.createElement('img');
+let fotochico = document.createElement('img');
+fotochica.src = siUserF;
+fotochico.src = siUserM;
 let pMensajes = document.createElement('p');
 pMensajes.className = "mensajeOak"
 
@@ -147,6 +154,7 @@ let imagenOak = "./assets/prOak.png"
 let prOak = document.createElement('img');
 prOak.className = "spriteOaka"
 prOak.src = imagenOak;
+
 divInnerInicial$$.appendChild(prOak)
 divInicial$$.addEventListener('click', function(){
     if (numMensaje == 1) {
@@ -156,13 +164,56 @@ divInicial$$.addEventListener('click', function(){
         pMensajes.textContent = "Pr.Oak: Here I'll show you what Jesús Sánchez made with a lot of effort."
         numMensaje++
     } else if (numMensaje == 3) {
-        pMensajes.textContent = "Pr.Oak: Here I'll show you what Jesús Sánchez made with a lot of effort."
+        pMensajes.textContent = "Pr.Oak: Before we start, I need to know a couple of things."
         numMensaje++
     } else if (numMensaje == 4) {
-        pMensajes.textContent = "Se acabó la prueba"
-        divInicial$$.remove()
-    }
+        pMensajes.textContent = "Pr.Oak: What is your name?"
+        setTimeout(() => {
+            userName = prompt('What is your name?');
+            if (userName == "") {
+                pMensajes.textContent = "Pr.Oak: Come on! Insert a name!"
+            } else{
+                numMensaje++
+            }
+        }, 250);
+    } else if (numMensaje == 5) {
+        pMensajes.textContent = `Pr.Oak: Oh... So, your name is ${userName}`
+        numMensaje++
+    } else if (numMensaje == 6) {
+        pMensajes.textContent = `Then... tell me, ${userName}... do you consider yourself a Girl or a Boy? (non-binary option is not available ATM)`
+        setTimeout(() => {
+            let fotoProtas = document.createElement('div');
+            fotoProtas.className = "pepino"
+            cuadritoMensajeInicial.appendChild(fotoProtas);
+            fotoProtas.appendChild(fotochico);
+            fotoProtas.appendChild(fotochica);
+            fotochico.addEventListener('click', function(){
+                numMensaje = 7
+                genderUser = "M";
+                setTimeout(() => {
+                    fotoProtas.remove()
+                }, 20);
+            })
+            fotochica.addEventListener('click', function(){
+                numMensaje = 7
+                genderUser = "F";
+                setTimeout(() => {
+                    fotoProtas.remove()
+                }, 20);
+            })
+        }, 250);
+    } else if (numMensaje == 7) {
+            pMensajes.textContent = "Pr.Oak: I see..."
+            numMensaje++
+        } else if (numMensaje == 8) {
+            pMensajes.textContent = "So now... Let's see that Pokedex!"
+            numMensaje++
+        } else if (numMensaje == 9) {
+            divInicial$$.remove()
+        }
+    
 })
+
 
 
 
@@ -177,12 +228,9 @@ divInicial$$.addEventListener('click', function(){
 
 
 
-let nameUser = prompt('What is your name?');
+// let genderUser = prompt('Are you a male(M) or a female(F)?');
 
-let genderUser = prompt('Type the following based on your gender:\n[M] = Male\n[F] = Female');
 
-let siUserM = './assets/hero.png'
-let siUserF = './assets/heroine.png'
 
 
 let divFotoTrainer$$ = document.querySelector('.fotoTrainer');
@@ -200,7 +248,7 @@ let randomTrainerNumber = Math.floor(Math.random() * 99999);
 
 divTrainerInfo$$ = document.querySelector('.infoTrainer');
 divTrainerInfo$$.innerHTML = `
-<h3>Name: ${nameUser}</h3>
+<h3>Name: ${userName}</h3>
 <h3>Gender: ${genderUser}</h3>
 <h3>Trainer No: ${randomTrainerNumber}</h3>
 <programmer>Description: A young programmer that wants to keep improving in order to be the best Full Stack Developer.</p>
